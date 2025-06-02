@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexawn LLC</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans:wght@400;500;700;900&display=swap"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .hover-card {
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+      .hover-card:hover {
+        transform: translateY(-4px);
+        background-color: #1c2f40;
+      }
+      body {
+        font-size: 18px;
+      }
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .fade-delay-1 { animation-delay: 0.3s; }
+      .fade-delay-2 { animation-delay: 0.6s; }
+      .fade-delay-3 { animation-delay: 0.9s; }
+      .fade-delay-4 { animation-delay: 0.12s; }
+      .fade-delay-5 { animation-delay: 0.15s; }
+    </style>
+  </head>
+  <body class="bg-[#101a23] text-white font-['Space Grotesk','Noto Sans',sans-serif]">
+    <header class="fade-in fade-delay-1 sticky top-0 z-50 bg-[#101a23] border-b border-[#223649] px-8 py-4 flex justify-between items-center">
+      <a href="https://nexawn.com" class="flex items-center gap-4 text-white">
+        <div class="size-6">
+          <img src="assets/logo.svg" alt="Logo" class="w-12 h-auto" />
+        </div>
+        <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Nexawn LLC</h2>
+      </a>
+
+      <!-- 漢堡按鈕 (手機用) -->
+      <button id="menu-button" class="md:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M5 12h16M6 18h16" />
+        </svg>
+      </button>
+
+      <!-- 導覽列 -->
+      <nav id="menu" class="hidden flex-col absolute top-full left-0 w-full bg-[#101a23] border-t border-[#223649] p-4 md:flex md:flex-row md:static md:w-auto md:p-0 md:space-x-6 md:items-center text-lg">
+        <a href="#about" class="hover:text-[#90adcb] py-2">About</a>
+        <a href="#services" class="hover:text-[#90adcb] py-2">Services</a>
+        <a href="#products" class="hover:text-[#90adcb] py-2">Products</a>
+        <a href="#contact" class="hover:text-[#90adcb] py-2">Contact</a>
+      </nav>
+    </header>
+
+    <main class="px-8 max-w-screen-xl mx-auto">
+      <!-- Hero -->
+      <section class="fade-in fade-delay-2 flex flex-col items-center text-center py-40">
+        <h2 class="text-4xl md:text-6xl font-bold mb-4">Pioneering Next-Level Innovation</h2>
+        <p class="text-lg md:text-xl text-[#90adcb] max-w-2xl">
+          At Nexawn LLC, we're driven by a technology-first approach and a team mindset focused on delivering cutting-edge solutions.
+        </p>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="fade-in fade-delay-3 py-0 scroll-mt-24 pb-40">
+        <h3 class="text-3xl font-bold mb-4">About Nexawn</h3>
+        <p class="text-[#90adcb] mb-14">
+          Our team at Nexawn LLC is committed to pushing the boundaries of technology. We believe in a technology-first approach, ensuring that our solutions are always at the
+          forefront of innovation. Our mindset is centered on collaboration, creativity, and a relentless pursuit of excellence.
+        </p>
+
+        <h4 class="text-2xl font-semibold mb-4 text-[#a0a0a0]">Why Choose Us</h4>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="p-6 border border-[#314d68] rounded-xl bg-[#182634] hover-card">
+            <div class="flex gap-2">
+              <div class="text-white" data-icon="Scales" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M239.43,133l-32-80h0a8,8,0,0,0-9.16-4.84L136,62V40a8,8,0,0,0-16,0V65.58L54.26,80.19A8,8,0,0,0,48.57,85h0v.06L16.57,165a7.92,7.92,0,0,0-.57,3c0,23.31,24.54,32,40,32s40-8.69,40-32a7.92,7.92,0,0,0-.57-3L66.92,93.77,120,82V208H104a8,8,0,0,0,0,16h48a8,8,0,0,0,0-16H136V78.42L187,67.1,160.57,133a7.92,7.92,0,0,0-.57,3c0,23.31,24.54,32,40,32s40-8.69,40-32A7.92,7.92,0,0,0,239.43,133ZM56,184c-7.53,0-22.76-3.61-23.93-14.64L56,109.54l23.93,59.82C78.76,180.39,63.53,184,56,184Zm144-32c-7.53,0-22.76-3.61-23.93-14.64L200,77.54l23.93,59.82C222.76,148.39,207.53,152,200,152Z"
+                  ></path>
+                </svg>
+              </div>
+              <h5 class="font-bold mb-2">Scalable Solutions</h5>
+            </div>
+            <p class="text-[#90adcb]">Flexible systems that grow with your business needs.</p>
+          </div>
+          <div class="p-6 border border-[#314d68] rounded-xl bg-[#182634] hover-card">
+            <div class="flex gap-2">
+              <div class="text-white" data-icon="Scales" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"
+                  ></path>
+                </svg>
+              </div>
+              <h5 class="font-bold mb-2">User-Centered Design</h5>
+            </div>
+            <p class="text-[#90adcb]">We design from the user’s point of view to enhance usability and satisfaction.</p>
+          </div>
+          <div class="p-6 border border-[#314d68] rounded-xl bg-[#182634] hover-card">
+            <div class="flex gap-2">
+              <div class="text-white" data-icon="Scales" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M208,40H48A16,16,0,0,0,32,56v58.78c0,89.61,75.82,119.34,91,124.39a15.53,15.53,0,0,0,10,0c15.2-5.05,91-34.78,91-124.39V56A16,16,0,0,0,208,40Zm0,74.79c0,78.42-66.35,104.62-80,109.18-13.53-4.51-80-30.69-80-109.18V56H208ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.68l50.34-50.34a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"
+                  ></path>
+                </svg>
+              </div>
+              <h5 class="font-bold mb-2">Reliable Performance</h5>
+            </div>
+            <p class="text-[#90adcb]">Stable, optimized systems that support business continuity.</p>
+          </div>
+        </div>
+
+        <h4 class="text-2xl font-semibold mt-12 mb-4 text-[#a0a0a0]">Approach & Philosophy</h4>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="p-6 border border-[#314d68] rounded-xl bg-[#182634] hover-card">
+            <div class="flex gap-2">
+              <div class="text-white" data-icon="Scales" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M176,232a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,232Zm40-128a87.55,87.55,0,0,1-33.64,69.21A16.24,16.24,0,0,0,176,186v6a16,16,0,0,1-16,16H96a16,16,0,0,1-16-16v-6a16,16,0,0,0-6.23-12.66A87.59,87.59,0,0,1,40,104.49C39.74,56.83,78.26,17.14,125.88,16A88,88,0,0,1,216,104Zm-16,0a72,72,0,0,0-73.74-72c-39,.92-70.47,33.39-70.26,72.39a71.65,71.65,0,0,0,27.64,56.3A32,32,0,0,1,96,186v6h64v-6a32.15,32.15,0,0,1,12.47-25.35A71.65,71.65,0,0,0,200,104Zm-16.11-9.34a57.6,57.6,0,0,0-46.56-46.55,8,8,0,0,0-2.66,15.78c16.57,2.79,30.63,16.85,33.44,33.45A8,8,0,0,0,176,104a9,9,0,0,0,1.35-.11A8,8,0,0,0,183.89,94.66Z"
+                  ></path>
+                </svg>
+              </div>
+              <h5 class="font-bold mb-2">Innovation-First</h5>
+            </div>
+            <p class="text-[#90adcb]">We focus on creating cutting-edge solutions that leverage the latest technologies.</p>
+          </div>
+          <div class="p-6 border border-[#314d68] rounded-xl bg-[#182634] hover-card">
+            <div class="flex gap-2">
+              <div class="text-white" data-icon="Scales" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"
+                  ></path>
+                </svg>
+              </div>
+              <h5 class="font-bold mb-2">User-Centered Design</h5>
+            </div>
+            <p class="text-[#90adcb]">Our design process revolves around understanding and addressing user needs.</p>
+          </div>
+          <div class="p-6 border border-[#314d68] rounded-xl bg-[#182634] hover-card">
+            <div class="flex gap-2">
+              <div class="text-white" data-icon="Scales" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M197.67,186.37a8,8,0,0,1,0,11.29C196.58,198.73,170.82,224,128,224c-37.39,0-64.53-22.4-80-39.85V208a8,8,0,0,1-16,0V160a8,8,0,0,1,8-8H88a8,8,0,0,1,0,16H55.44C67.76,183.35,93,208,128,208c36,0,58.14-21.46,58.36-21.68A8,8,0,0,1,197.67,186.37ZM216,40a8,8,0,0,0-8,8V71.85C192.53,54.4,165.39,32,128,32,85.18,32,59.42,57.27,58.34,58.34a8,8,0,0,0,11.3,11.34C69.86,69.46,92,48,128,48c35,0,60.24,24.65,72.56,40H168a8,8,0,0,0,0,16h48a8,8,0,0,0,8-8V48A8,8,0,0,0,216,40Z"
+                  ></path>
+                </svg>
+              </div>
+              <h5 class="font-bold mb-2">Continuous Improvement</h5>
+            </div>
+            <p class="text-[#90adcb]">We constantly refine our products based on feedback and trends.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services" class="fade-in fade-delay-4 pb-40 scroll-mt-24">
+        <h3 class="text-3xl font-bold mb-6">What We Do</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="hover-card bg-[#182634] p-6 rounded-xl border border-[#314d68]">
+            <div class="flex gap-2">
+              <div class="text-white" data-icon="Scales" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M69.12,94.15,28.5,128l40.62,33.85a8,8,0,1,1-10.24,12.29l-48-40a8,8,0,0,1,0-12.29l48-40a8,8,0,0,1,10.24,12.3Zm176,27.7-48-40a8,8,0,1,0-10.24,12.3L227.5,128l-40.62,33.85a8,8,0,1,0,10.24,12.29l48-40a8,8,0,0,0,0-12.29ZM162.73,32.48a8,8,0,0,0-10.25,4.79l-64,176a8,8,0,0,0,4.79,10.26A8.14,8.14,0,0,0,96,224a8,8,0,0,0,7.52-5.27l64-176A8,8,0,0,0,162.73,32.48Z"
+                  ></path>
+                </svg>
+              </div>
+              <h5 class="font-bold mb-2">App & Web Development</h5>
+            </div>
+            <p class="text-[#90adcb]">Mobile apps and responsive websites.</p>
+          </div>
+          <div class="hover-card bg-[#182634] p-6 rounded-xl border border-[#314d68]">
+            <div class="flex gap-2">
+              <div class="text-white" data-icon="Scales" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M227.32,73.37,182.63,28.69a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H216a8,8,0,0,0,0-16H115.32l112-112A16,16,0,0,0,227.32,73.37ZM136,75.31,152.69,92,68,176.69,51.31,160ZM48,208V179.31L76.69,208Zm48-3.31L79.32,188,164,103.31,180.69,120Zm96-96L147.32,64l24-24L216,84.69Z"
+                  ></path>
+                </svg>
+              </div>
+              <h5 class="font-bold mb-2">UI/UX Design</h5>
+            </div>
+            <p class="text-[#90adcb]">Clean, intuitive interfaces by design experts.</p>
+          </div>
+          <div class="hover-card bg-[#182634] p-6 rounded-xl border border-[#314d68]">
+            <div class="flex gap-2">
+              <div class="text-white" data-icon="Scales" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M160,40A88.09,88.09,0,0,0,81.29,88.67,64,64,0,1,0,72,216h88a88,88,0,0,0,0-176Zm0,160H72a48,48,0,0,1,0-96c1.1,0,2.2,0,3.29.11A88,88,0,0,0,72,128a8,8,0,0,0,16,0,72,72,0,1,1,72,72Z"
+                  ></path>
+                </svg>
+              </div>
+              <h5 class="font-bold mb-2">SaaS Products</h5>
+            </div>
+            <p class="text-[#90adcb]">Scalable cloud-based solutions for different industries.</p>
+          </div>
+          <div class="hover-card bg-[#182634] p-6 rounded-xl border border-[#314d68]">
+            <div class="flex gap-2">
+              <div class="text-white" data-icon="Scales" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm88-29.84q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.21,107.21,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186,40.54a8,8,0,0,0-3.94-6,107.71,107.71,0,0,0-26.25-10.87,8,8,0,0,0-7.06,1.49L130.16,40Q128,40,125.84,40L107.2,25.11a8,8,0,0,0-7.06-1.48A107.6,107.6,0,0,0,73.89,34.51a8,8,0,0,0-3.93,6L67.32,64.27q-1.56,1.49-3,3L40.54,70a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06L40,125.84Q40,128,40,130.16L25.11,148.8a8,8,0,0,0-1.48,7.06,107.21,107.21,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.49,1.56,3,3L70,215.46a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49L125.84,216q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.48,3-3L215.46,186a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06Zm-16.1-6.5a73.93,73.93,0,0,1,0,8.68,8,8,0,0,0,1.74,5.48l14.19,17.73a91.57,91.57,0,0,1-6.23,15L187,173.11a8,8,0,0,0-5.1,2.64,74.11,74.11,0,0,1-6.14,6.14,8,8,0,0,0-2.64,5.1l-2.51,22.58a91.32,91.32,0,0,1-15,6.23l-17.74-14.19a8,8,0,0,0-5-1.75h-.48a73.93,73.93,0,0,1-8.68,0,8,8,0,0,0-5.48,1.74L100.45,215.8a91.57,91.57,0,0,1-15-6.23L82.89,187a8,8,0,0,0-2.64-5.1,74.11,74.11,0,0,1-6.14-6.14,8,8,0,0,0-5.1-2.64L46.43,170.6a91.32,91.32,0,0,1-6.23-15l14.19-17.74a8,8,0,0,0,1.74-5.48,73.93,73.93,0,0,1,0-8.68,8,8,0,0,0-1.74-5.48L40.2,100.45a91.57,91.57,0,0,1,6.23-15L69,82.89a8,8,0,0,0,5.1-2.64,74.11,74.11,0,0,1,6.14-6.14A8,8,0,0,0,82.89,69L85.4,46.43a91.32,91.32,0,0,1,15-6.23l17.74,14.19a8,8,0,0,0,5.48,1.74,73.93,73.93,0,0,1,8.68,0,8,8,0,0,0,5.48-1.74L155.55,40.2a91.57,91.57,0,0,1,15,6.23L173.11,69a8,8,0,0,0,2.64,5.1,74.11,74.11,0,0,1,6.14,6.14,8,8,0,0,0,5.1,2.64l22.58,2.51a91.32,91.32,0,0,1,6.23,15l-14.19,17.74A8,8,0,0,0,199.87,123.66Z"
+                  ></path>
+                </svg>
+              </div>
+              <h5 class="font-bold mb-2">Internal Tools</h5>
+            </div>
+            <p class="text-[#90adcb]">Customized tools for internal team productivity.</p>
+          </div>
+          <div class="hover-card bg-[#182634] p-6 rounded-xl border border-[#314d68]">
+            <div class="flex gap-2">
+              <div class="text-white" data-icon="Scales" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M200,48H136V16a8,8,0,0,0-16,0V48H56A32,32,0,0,0,24,80V192a32,32,0,0,0,32,32H200a32,32,0,0,0,32-32V80A32,32,0,0,0,200,48Zm16,144a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V80A16,16,0,0,1,56,64H200a16,16,0,0,1,16,16Zm-52-56H92a28,28,0,0,0,0,56h72a28,28,0,0,0,0-56Zm-28,16v24H120V152ZM80,164a12,12,0,0,1,12-12h12v24H92A12,12,0,0,1,80,164Zm84,12H152V152h12a12,12,0,0,1,0,24ZM72,108a12,12,0,1,1,12,12A12,12,0,0,1,72,108Zm88,0a12,12,0,1,1,12,12A12,12,0,0,1,160,108Z"
+                  ></path>
+                </svg>
+              </div>
+              <h5 class="font-bold mb-2">Automation Platforms</h5>
+            </div>
+            <p class="text-[#90adcb]">Automating business tasks and flows.</p>
+          </div>
+          <div class="hover-card bg-[#182634] p-6 rounded-xl border border-[#314d68]">
+            <div class="flex gap-2">
+              <div class="text-white" data-icon="Scales" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"
+                  ></path>
+                </svg>
+              </div>
+              <h5 class="font-bold mb-2">Freelance Services</h5>
+            </div>
+            <p class="text-[#90adcb]">Dedicated freelance developers and designers.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Products -->
+      <section id="products" class="fade-in fade-delay-5 pb-40 scroll-mt-24">
+        <h3 class="text-3xl font-bold mb-6">Products</h3>
+        <div class="space-y-12">
+          <div class="flex flex-col md:flex-row items-center gap-8">
+            <div
+              class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC9M2eyAFuqN0RytAHdq-M4-MPMVGFXQv1cwaPpJ059-xHYtRHWh4UeOBlnaAQb-kYWgN17FO5CKdIgzLag1THNXJAjGbdH-m0yBPOsppIX4QT0q8kGLgpQoboFZOjyKPrXg4EdOrUNKLKpYLwZo1AbKOV0_KDdKQ81ZzKBgu3Mop3yNw3_Q2w3ZWOPdEGMWtTEAB6sOCIHZyiDiOqFg91aFoS9WCWiL3VzLOAt8BFT3vdxikw0YkfAM1-SlSUXPj5dwEF6O4XsyuEt");'
+            ></div>
+            <div>
+              <h4 class="text-2xl font-bold mb-2">UPoint</h4>
+              <p class="text-[#90adcb] mb-2">Connect, Collaborate, and Create</p>
+              <p class="text-[#90adcb]">UPoint is a revolutionary platform designed to connect users and enhance collaboration.</p>
+              <a href="#" class="inline-block mt-3 text-[#66CCFF] font-semibold underline">Learn More</a>
+            </div>
+          </div>
+          <div class="flex flex-col md:flex-row items-center gap-8">
+            <div
+              class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDNlPEwDh4iA6OqCGyXswd3zszyRCTZEDsqOcMmyv-RMzxvR_pQbEB1FpcUP1vYsuVWfoZDgyfnQ2tPMjaOVXF4gEELRK6mrzA7FjZv3-7we-dyuOueTSfDhXZI-oGRajfROT_RB4aCyywsAsRUKYxcNVJ4GPAhmr3jE9Xr1yILh6F_LjygPTwRsFOrhLKe8xeQugDNiVUHiH_KYNZLNFiT38XM2_OJw136YFulXwr24PzQXUOUb5z0IFer1bEq1Ed96Sw8pmz33qkW");'
+            ></div>
+            <div>
+              <h4 class="text-2xl font-bold mb-2">GTO Monster</h4>
+              <p class="text-[#90adcb] mb-2">Optimize Your Game, Maximize Your Wins</p>
+              <p class="text-[#90adcb]">GTO Monster is a powerful tool for optimizing game strategies and improving player performance.</p>
+              <a href="#" class="inline-block mt-3 text-[#66CCFF] font-semibold underline">Visit Site</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="pb-40">
+        <h3 class="text-3xl font-bold mb-6">Contact Us</h3>
+            <div class="p-4 grid grid-cols-[20%_1fr] gap-x-6">
+              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#314d68] py-5">
+                <p class="text-[#90adcb] text-sm font-normal leading-normal">Email</p>
+                <p class="text-white text-sm font-normal leading-normal">jarren@nexawn.com</p>
+              </div>
+              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#314d68] py-5">
+                <p class="text-[#90adcb] text-sm font-normal leading-normal">Phone</p>
+                <p class="text-white text-sm font-normal leading-normal">(585) 2826713</p>
+              </div>
+              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#314d68] py-5">
+                <p class="text-[#90adcb] text-sm font-normal leading-normal">Location</p>
+                <p class="text-white text-sm font-normal leading-normal">Delaware, United States</p>
+              </div>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <input
+                  placeholder="Your Name"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#223649] focus:border-none h-14 placeholder:text-[#90adcb] p-4 text-base font-normal leading-normal"
+                  value=""
+                />
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <input
+                  placeholder="Your Email"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#223649] focus:border-none h-14 placeholder:text-[#90adcb] p-4 text-base font-normal leading-normal"
+                  value=""
+                />
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <textarea
+                  placeholder="Your Message"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#223649] focus:border-none min-h-36 placeholder:text-[#90adcb] p-4 text-base font-normal leading-normal"
+                ></textarea>
+              </label>
+            </div>
+            <div class="flex px-4 py-3 justify-start">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#248bf3] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Send Message</span>
+              </button>
+            </div>
+      </section>
+    </main>
+
+    <footer class="text-center text-[#90adcb] py-10 border-t border-[#223649]">
+      © 2025 Nexawn LLC. All rights reserved. Pioneering Next-Level Innovation.
+    </footer>
+
+    <script>
+      const menuButton = document.getElementById('menu-button');
+      const menu = document.getElementById('menu');
+      menuButton.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>
